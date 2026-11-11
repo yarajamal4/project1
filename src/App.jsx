@@ -1,8 +1,13 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Landing from "./components/Landing";
+
 function App() {
-  <Routes>
-    <Route path="/" element={<Landing />} />
-  </Routes>
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+    </Routes>
+  );
 }
+
 export default App;
