@@ -78,8 +78,6 @@ function Landing() {
               </div>
             </div>
           </div>
-
-          <div className="floating-card">✨ Smart Learning</div>
         </div>
       </section>
 
@@ -190,7 +188,7 @@ function Landing() {
           <p>We'd love to hear from you. Feel free to get in touch.</p>
         </div>
 
-        <a href="mailto:hello@quizzy.com" className="primary-btn">
+        <a href="mailto:quizzysupport@gmail.com" className="primary-btn">
           Send Us an Email
         </a>
       </section>
