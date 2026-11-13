@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Subjects from "./pages/Subjects";
 import SubjectDetails from "./pages/SubjectDetails";
 import Quizzes from "./pages/Quizzes";
+import QuizAttempt from "./pages/QuizAttempt";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/subjects" element={<Subjects />} />
       <Route path="/subjects/:id" element={<SubjectDetails />} />
       <Route path="/quizzes" element={<Quizzes />} />
+      <Route path="/quiz/:id" element={<QuizAttempt />} />
     </Routes>
   );
 }

@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+.attempt-page {
+  min-height: 100vh;
+  background: #f8f7fc;
+  color: #292538;
+  font-family: Arial, sans-serif;
+}
+
+.attempt-header {
+  height: 75px;
+  padding: 0 7%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeaf5;
+}
+
+.back-link {
+  color: #7660a8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attempt-brand {
+  color: #9674d8;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.question-counter {
+  background: #eee7fa;
+  color: #7658b3;
+  padding: 9px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attempt-container {
+  width: 90%;
+  max-width: 850px;
+  margin: 45px auto;
+}
+
+.attempt-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.attempt-subject {
+  color: #9674d8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.attempt-heading h1 {
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.attempt-heading p {
+  color: #888398;
+  font-size: 15px;
+}
+
+.attempt-progress {
+  margin-bottom: 25px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #6f6a7d;
+  font-size: 14px;
+}
+
+.progress-track {
+  height: 9px;
+  background: #e9e3f2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #9674d8;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.question-card {
+  background: #ffffff;
+  border: 1px solid #eeeaf5;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 5px 20px rgba(65, 45, 100, 0.05);
+}
+
+.question-number {
+  color: #9674d8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.question-card h2 {
+  font-size: 21px;
+  line-height: 1.5;
+  margin: 0 0 28px;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.answer-option {
+  width: 100%;
+  min-height: 58px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  background: #ffffff;
+  border: 1.5px solid #e9e5f0;
+  border-radius: 12px;
+  color: #403b4d;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.answer-option:hover {
+  border-color: #b69ce7;
+  background: #faf8fe;
+}
+
+.answer-option.selected {
+  border-color: #9674d8;
+  background: #f2edfb;
+  color: #7658b3;
+  font-weight: 600;
+}
+
+.option-letter {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #f1eef6;
+  color: #7660a8;
+  font-weight: 700;
+}
+
+.answer-option.selected .option-letter {
+  background: #9674d8;
+  color: #ffffff;
+}
+
+.attempt-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.attempt-navigation button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.previous-btn {
+  background: #eeeaf5;
+  color: #6f6680;
+}
+
+.previous-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.next-btn,
+.submit-btn {
+  background: #9674d8;
+  color: #ffffff;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+  background: #8060c2;
+}
+
+.answered-count {
+  color: #888398;
+  font-size: 13px;
+  text-align: center;
+}
+
+.quiz-not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.quiz-not-found a {
+  color: #9674d8;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .attempt-header {
+    padding: 0 5%;
+  }
+
+  .attempt-brand {
+    font-size: 21px;
+  }
+
+  .back-link {
+    font-size: 12px;
+  }
+
+  .attempt-container {
+    margin: 30px auto;
+  }
+
+  .attempt-heading h1 {
+    font-size: 24px;
+  }
+
+  .question-card {
+    padding: 22px 18px;
+  }
+
+  .question-card h2 {
+    font-size: 18px;
+  }
+
+  .answer-option {
+    font-size: 14px;
+  }
+
+  .attempt-navigation {
+    flex-wrap: wrap;
+  }
+
+  .answered-count {
+    order: 3;
+    width: 100%;
+  }
+
+  .attempt-navigation button {
+    padding: 12px 15px;
+  }
+}
