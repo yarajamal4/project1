@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Dashboard from "./pages/Dashboard";
 import Subjects from "./pages/Subjects";
 import SubjectDetails from "./pages/SubjectDetails";
+import Quizzes from "./pages/Quizzes";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/subjects" element={<Subjects />} />
       <Route path="/subjects/:id" element={<SubjectDetails />} />
+      <Route path="/quizzes" element={<Quizzes />} />
     </Routes>
   );
 }
