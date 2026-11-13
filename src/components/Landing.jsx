@@ -3,7 +3,9 @@ import Navbar from "../components/Navbar";
 import "../components/Landing.css";
 import { Link } from "react-router-dom";
 
+
 function Landing() {
+
   return (
     <div className="landing-page">
       <Navbar />

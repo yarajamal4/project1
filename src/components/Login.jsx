@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -8,21 +9,22 @@ function Login() {
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [message, setMessage] = useState("");
-
-  function handleLogin(e) {
+  const navigate = useNavigate();
+  const handleLogin = (e) => {
     e.preventDefault();
-
+    console.log("login button clicked");
+    console.log("Email:", email);
+    console.log("Password:", password);
     if (!email || !password) {
+      alert("Please enter both email and password.");
       return;
     }
-
-   
-  }
+    navigate("/dashboard");
+  };
 
   return (
     <div className="login-page">
       <div className="login-container">
-
         {/* Left Side */}
         <div className="login-welcome">
           <Link to="/" className="login-logo">
@@ -38,8 +40,8 @@ function Login() {
             </h1>
 
             <p>
-              Continue your learning journey with Quizzy.
-              Your next achievement is just one step away!
+              Continue your learning journey with Quizzy. Your next achievement
+              is just one step away!
             </p>
 
             <div className="welcome-decoration">
@@ -146,7 +148,6 @@ function Login() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
