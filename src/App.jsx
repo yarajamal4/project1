@@ -8,6 +8,7 @@ import Subjects from "./pages/Subjects";
 import SubjectDetails from "./pages/SubjectDetails";
 import Quizzes from "./pages/Quizzes";
 import QuizAttempt from "./pages/QuizAttempt";
+import QuizResults from "./pages/QuizResults";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/subjects/:id" element={<SubjectDetails />} />
       <Route path="/quizzes" element={<Quizzes />} />
       <Route path="/quiz/:id" element={<QuizAttempt />} />
+      <Route path="/quiz-results" element={<QuizResults   />} />
     </Routes>
   );
 }
