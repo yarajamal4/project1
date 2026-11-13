@@ -158,27 +158,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about section" id="about">
-        <div className="about-content">
-          <span>ABOUT QUIZZY</span>
-
-          <h2>
-            Learning Should Be
-            <span> Simple and Effective.</span>
-          </h2>
-
-          <p>
-            Quizzy is a smart study platform designed to help students organize
-            their learning, practice their knowledge, and review important
-            concepts in one place.
-          </p>
-
-          <a href="/register" className="primary-btn">
-            Start Your Journey
-          </a>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section className="contact section" id="contact">
@@ -198,6 +177,7 @@ function Landing() {
         <Link to="/" className="logo">
           Quizzy<span>.</span>
         </Link>
+        <Link to="/register">Create Account</Link>
 
         <p>Study smarter, not harder.</p>
 
