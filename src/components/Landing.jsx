@@ -20,11 +20,6 @@ function Landing() {
             <span> Not Harder.</span>
           </h1>
 
-          <p>
-            Make your learning journey easier with Quizzy. Practice quizzes,
-            review flashcards, and explore summaries all in one place.
-          </p>
-
           <div className="hero-buttons">
             <a href="/register" className="primary-btn">
               Get Started
