@@ -163,7 +163,6 @@ function Landing() {
         <div className="section-heading">
           <span>CONTACT US</span>
           <h2>Have Questions?</h2>
-          <p>We'd love to hear from you. Feel free to get in touch.</p>
         </div>
 
         <a href="mailto:quizzysupport@gmail.com" className="primary-btn">

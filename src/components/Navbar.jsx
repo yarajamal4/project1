@@ -9,13 +9,6 @@ function Navbar() {
         Quizzy<span>.</span>
       </Link>
 
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/features">Features</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
-
       <div className="nav-buttons">
         <Link to="/login" className="login-btn">
           Login
