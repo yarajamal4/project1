@@ -3,9 +3,7 @@ import Navbar from "../components/Navbar";
 import "../components/Landing.css";
 import { Link } from "react-router-dom";
 
-
 function Landing() {
-
   return (
     <div className="landing-page">
       <Navbar />
@@ -21,13 +19,13 @@ function Landing() {
           </h1>
 
           <div className="hero-buttons">
-            <a href="/register" className="primary-btn">
+            <Link to="/register" className="primary-btn">
               Get Started
-            </a>
+            </Link>
 
-            <a href="#features" className="secondary-btn">
+            <Link to="/features" className="secondary-btn">
               Explore Features
-            </a>
+            </Link>
           </div>
 
           <div className="hero-note">
@@ -46,7 +44,6 @@ function Landing() {
             </div>
 
             <h3>Keep Learning!</h3>
-
             <p>You're doing great. Keep going!</p>
 
             <div className="progress-info">
@@ -78,81 +75,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="features section" id="features">
-        <div className="section-heading">
-          <span>WHAT WE OFFER</span>
-        </div>
-
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-icon">📝</div>
-            <h3>Practice Quizzes</h3>
-            <p>
-              Test your knowledge with interactive quizzes based on your
-              subjects and topics.
-            </p>
-          </div>
-
-          <div className="feature-card">
-            <div className="feature-icon">🗂️</div>
-            <h3>Smart Flashcards</h3>
-            <p>
-              Remember important concepts using simple question and answer
-              cards.
-            </p>
-          </div>
-
-          <div className="feature-card">
-            <div className="feature-icon">📚</div>
-            <h3>Study Summaries</h3>
-            <p>
-              Review important information through organized and easy-to-read
-              summaries.
-            </p>
-          </div>
-
-          <div className="feature-card">
-            <div className="feature-icon">📊</div>
-            <h3>Track Progress</h3>
-            <p>
-              Follow your quiz results and see how your learning improves over
-              time.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="how-it-works section">
-        <div className="section-heading">
-          <span>HOW IT WORKS</span>
-        </div>
-
-        <div className="steps-grid">
-          <div className="step-card">
-            <div className="step-number">01</div>
-            <h3>Choose Your Subject</h3>
-            <p>Select the subject and topic you want to study.</p>
-          </div>
-
-          <div className="step-card">
-            <div className="step-number">02</div>
-            <h3>Practice and Review</h3>
-            <p>
-              Use quizzes, flashcards, and summaries to improve your knowledge.
-            </p>
-          </div>
-
-          <div className="step-card">
-            <div className="step-number">03</div>
-            <h3>Track Your Progress</h3>
-            <p>Check your results and discover where you need more practice.</p>
-          </div>
-        </div>
-      </section>
-
-
       {/* Contact Section */}
       <section className="contact section" id="contact">
         <div className="section-heading">
@@ -170,6 +92,7 @@ function Landing() {
         <Link to="/" className="logo">
           Quizzy<span>.</span>
         </Link>
+
         <Link to="/register">Create Account</Link>
 
         <p>Study smarter, not harder.</p>
