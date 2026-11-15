@@ -87,8 +87,6 @@ function Landing() {
       <section className="features section" id="features">
         <div className="section-heading">
           <span>WHAT WE OFFER</span>
-          <h2>Everything You Need to Study Better</h2>
-          <p>Simple tools to make studying more effective and enjoyable.</p>
         </div>
 
         <div className="features-grid">
@@ -134,7 +132,6 @@ function Landing() {
       <section className="how-it-works section">
         <div className="section-heading">
           <span>HOW IT WORKS</span>
-          <h2>Start Learning in 3 Simple Steps</h2>
         </div>
 
         <div className="steps-grid">
