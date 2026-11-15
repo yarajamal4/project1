@@ -1,9 +1,13 @@
-import React from "react";
+import React,{useRef} from "react";
 import Navbar from "../components/Navbar";
 import "../components/Landing.css";
 import { Link } from "react-router-dom";
 
 function Landing() {
+  const FeaturesRef = useRef(null);
+  const scrollToFeatures = () => {
+    FeaturesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="landing-page">
       <Navbar />
@@ -23,9 +27,9 @@ function Landing() {
               Get Started
             </Link>
 
-            <Link to="/features" className="secondary-btn">
+            <button className="secondary-btn" onClick={scrollToFeatures}>
               Explore Features
-            </Link>
+            </button>
           </div>
 
           <div className="hero-note">
@@ -76,7 +80,7 @@ function Landing() {
       </section>
 
       {/* Features Section */}
-      <section className="features section" id="features">
+      <section className="features section" id="features" ref={FeaturesRef}>
         <div className="section-heading">
           <span>WHAT WE OFFER</span>
         </div>
