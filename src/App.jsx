@@ -10,6 +10,7 @@ import Quizzes from "./pages/Quizzes";
 import QuizAttempt from "./pages/QuizAttempt";
 import QuizResults from "./pages/QuizResults";
 import Flashcards from "./pages/Flashcards";
+import Progress from "./pages/Progress";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/quiz/:id" element={<QuizAttempt />} />
       <Route path="/quiz-results" element={<QuizResults />} />
       <Route path="/flashcards" element={<Flashcards />} />
+      <Route path="/progress" element={<Progress />} />
     </Routes>
   );
 }
