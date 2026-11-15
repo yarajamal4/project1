@@ -122,9 +122,6 @@ function Quizzes() {
             <span>▤</span> Flashcards
           </Link>
 
-          <Link to="/summaries" className="quizzes-nav-link">
-            <span>📄</span> Summaries
-          </Link>
 
           <Link to="/progress" className="quizzes-nav-link">
             <span>▥</span> My Progress

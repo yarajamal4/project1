@@ -132,10 +132,6 @@ function SubjectDetails() {
             <span>▤</span> Flashcards
           </Link>
 
-          <Link to="/summaries" className="details-nav-link">
-            <span>📄</span> Summaries
-          </Link>
-
           <Link to="/progress" className="details-nav-link">
             <span>▥</span> My Progress
           </Link>

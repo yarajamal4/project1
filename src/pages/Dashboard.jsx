@@ -81,10 +81,6 @@ function Dashboard() {
             <span>▤</span> Flashcards
           </Link>
 
-          <Link to="/summaries" className="sidebar-link">
-            <span>📄</span> Summaries
-          </Link>
-
           <Link to="/progress" className="sidebar-link">
             <span>▥</span> My Progress
           </Link>

@@ -1,0 +1,279 @@
+.flashcards-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f7fc;
+  color: #292538;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.flashcards-sidebar {
+  width: 240px;
+  background: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eeeaf5;
+}
+
+.sidebar-logo {
+  color: #9674d8;
+  font-size: 27px;
+  margin-bottom: 45px;
+}
+
+.sidebar-logo span {
+  color: #d0b9f4;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-menu a,
+.sidebar-logout {
+  text-decoration: none;
+  color: #777184;
+  padding: 13px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background: #e9dff8;
+  color: #9674d8;
+}
+
+.sidebar-logout {
+  margin-top: auto;
+}
+
+/* Main */
+
+.flashcards-main {
+  flex: 1;
+  padding: 35px 45px;
+  min-width: 0;
+}
+
+.flashcards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.flashcards-header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.flashcards-header p,
+.study-header p {
+  color: #898393;
+}
+
+.browse-subjects-btn {
+  background: #9674d8;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+/* Info Cards */
+
+.flashcards-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.flashcards-info div {
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(40, 30, 60, 0.04);
+}
+
+.flashcards-info h3 {
+  color: #9674d8;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.flashcards-info p {
+  color: #898393;
+  font-size: 14px;
+}
+
+/* Study Section */
+
+.flashcards-study {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(40, 30, 60, 0.04);
+}
+
+.study-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.study-header h2 {
+  margin-bottom: 8px;
+}
+
+.study-header select {
+  padding: 11px;
+  border: 1px solid #e4dced;
+  border-radius: 9px;
+  background: white;
+  color: #292538;
+}
+
+.card-counter {
+  text-align: center;
+  color: #898393;
+  margin-bottom: 15px;
+}
+
+/* Flashcard */
+
+.flashcard {
+  max-width: 650px;
+  min-height: 280px;
+  margin: auto;
+  padding: 35px;
+  background: linear-gradient(135deg, #9674d8, #b69ce8);
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.flashcard:hover {
+  transform: translateY(-4px);
+}
+
+.flashcard.flipped {
+  background: linear-gradient(135deg, #8061bd, #a68bd9);
+}
+
+.flashcard-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.flashcard h2 {
+  font-size: 25px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.flashcard p {
+  margin-top: 25px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Controls */
+
+.flashcard-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.flashcard-controls button {
+  border: 1px solid #dcd1ed;
+  background: white;
+  color: #9674d8;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.flashcard-controls button:hover {
+  background: #e9dff8;
+}
+
+.flashcard-controls .flip-btn {
+  background: #9674d8;
+  color: white;
+  border-color: #9674d8;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .flashcards-sidebar {
+    width: 190px;
+  }
+
+  .flashcards-main {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .flashcards-page {
+    flex-direction: column;
+  }
+
+  .flashcards-sidebar {
+    width: auto;
+    padding: 15px;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-logout {
+    margin-top: 15px;
+  }
+
+  .flashcards-main {
+    padding: 20px;
+  }
+
+  .flashcards-info {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcards-header,
+  .study-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .flashcard-controls {
+    flex-wrap: wrap;
+  }
+}
