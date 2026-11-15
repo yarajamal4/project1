@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "./Flashcards.css";
 
 function Flashcards() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [flippedCards, setFlippedCards] = useState({});
   const [selectedSubject, setSelectedSubject] = useState("All");
 
   const flashcards = [
@@ -51,26 +50,9 @@ function Flashcards() {
       ? flashcards
       : flashcards.filter((card) => card.subject === selectedSubject);
 
-  const currentCard = filteredCards[currentIndex];
-
-  const handleNext = () => {
-    setIsFlipped(false);
-    setCurrentIndex((prev) =>
-      prev === filteredCards.length - 1 ? 0 : prev + 1,
-    );
-  };
-
-  const handlePrevious = () => {
-    setIsFlipped(false);
-    setCurrentIndex((prev) =>
-      prev === 0 ? filteredCards.length - 1 : prev - 1,
-    );
-  };
-
   const handleSubjectChange = (e) => {
     setSelectedSubject(e.target.value);
-    setCurrentIndex(0);
-    setIsFlipped(false);
+    setFlippedCards({});
   };
 
   return (
@@ -124,59 +106,63 @@ function Flashcards() {
           </div>
         </section>
 
-        <section className="flashcards-study">
-          <div className="study-header">
-            <div>
-              <h2>Study Cards</h2>
-              <p>Click on the card to reveal the answer.</p>
-            </div>
+        <div className="study-header">
+  <div>
+    <h2>Choose a Flashcard</h2>
+    <p>Select any card to reveal its answer.</p>
+  </div>
 
-            <select value={selectedSubject} onChange={handleSubjectChange}>
-              <option value="All">All Subjects</option>
-              <option value="Web Programming">Web Programming</option>
-              <option value="Computer Science">Computer Science</option>
-              <option value="Database Systems">Database Systems</option>
-              <option value="Mobile Applications">Mobile Applications</option>
-              <option value="Machine Learning">Machine Learning</option>
-            </select>
-          </div>
+  <select
+    value={selectedSubject}
+    onChange={handleSubjectChange}
+  >
+    <option value="All">All Subjects</option>
+    <option value="Web Programming">Web Programming</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Database Systems">Database Systems</option>
+    <option value="Mobile Applications">Mobile Applications</option>
+    <option value="Machine Learning">Machine Learning</option>
+  </select>
+</div>
 
-          {filteredCards.length > 0 ? (
-            <>
-              <p className="card-counter">
-                Card {currentIndex + 1} of {filteredCards.length}
-              </p>
+<div className="flashcards-grid">
+  {filteredCards.length > 0 ? (
+    filteredCards.map((card) => (
+      <div
+        className={`flashcard-item ${
+          flippedCards[card.id] ? "flipped" : ""
+        }`}
+        key={card.id}
+        onClick={() =>
+          setFlippedCards((prev) => ({
+            ...prev,
+            [card.id]: !prev[card.id],
+          }))
+        }
+      >
+        <span className="flashcard-label">
+          {flippedCards[card.id] ? "ANSWER" : "QUESTION"}
+        </span>
 
-              <div
-                className={`flashcard ${isFlipped ? "flipped" : ""}`}
-                onClick={() => setIsFlipped(!isFlipped)}
-              >
-                <span className="flashcard-label">
-                  {isFlipped ? "ANSWER" : "QUESTION"}
-                </span>
+        <h3>
+          {flippedCards[card.id]
+            ? card.answer
+            : card.question}
+        </h3>
 
-                <h2>{isFlipped ? currentCard.answer : currentCard.question}</h2>
-
-                <p>Click to {isFlipped ? "see question" : "reveal answer"}</p>
-              </div>
-
-              <div className="flashcard-controls">
-                <button onClick={handlePrevious}>Previous</button>
-
-                <button
-                  className="flip-btn"
-                  onClick={() => setIsFlipped(!isFlipped)}
-                >
-                  Flip Card
-                </button>
-
-                <button onClick={handleNext}>Next</button>
-              </div>
-            </>
-          ) : (
-            <p>No flashcards available.</p>
-          )}
-        </section>
+        <p>
+          Click to {flippedCards[card.id]
+            ? "see question"
+            : "reveal answer"}
+        </p>
+      </div>
+    ))
+  ) : (
+    <p className="no-flashcards">
+      No flashcards available.
+    </p>
+  )}
+</div>
       </main>
     </div>
   );
